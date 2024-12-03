@@ -67,6 +67,7 @@ public class AppHooks {
 		ScreenRecorderUtil.stopRecord();
 		screenshotname = sce.getName().replaceAll(" ", "_");
 		Shutterbug.shootPage(driver, Capture.FULL, false).save("reports/test-Report/ScreenShot/");
+		driver.close();
 		driver.quit();
 	}
 
