@@ -25,7 +25,7 @@ public class PracticePage {
 	public PracticePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		wait =  new WebDriverWait(this.driver, 30);
+		wait =  new WebDriverWait(this.driver, Duration.ofSeconds(30));
 	}
 
 //####################Page-Factory################################
