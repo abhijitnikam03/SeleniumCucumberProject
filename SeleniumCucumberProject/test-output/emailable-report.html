@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -7,12 +7,84 @@
 </head>
 <body>
 <table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">37,933</td><td></td><td></td></tr>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">21,206</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.testrunner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1733205775726</td><td rowspan="1">29845</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.testrunner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1733376653642</td><td rowspan="1">20235</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify practise page componant&quot;</td><td>&quot;Optional[Login to practice page]&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.testrunner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify practise page componant&quot;</td><td>&quot;Optional[Login to practice page]&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NoClassDefFoundError: org/apache/commons/io/build/AbstractStreamBuilder
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:859)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:931)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:819)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:795)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:715)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:702)
+	at org.apache.poi.openxml4j.util.ZipSecureFile.&lt;init&gt;(ZipSecureFile.java:122)
+	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipFile(ZipHelper.java:205)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:140)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:277)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.createWorkbook(XSSFWorkbookFactory.java:124)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:327)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:295)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:276)
+	at util.ExcelReader.getdata(ExcelReader.java:36)
+	at com.stepdef.PractiseStepPage.select_testdata_from_excel(PractiseStepPage.java:41)
+	at ✽.Select testdata from excel &quot;Sheet1&quot; 0(file:///C:/Users/abhij/git/repository/SeleniumCucumberProject/src/test/resource/features/practice.feature:8)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.io.build.AbstractStreamBuilder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:859)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:931)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:819)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:795)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:715)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:702)
+	at org.apache.poi.openxml4j.util.ZipSecureFile.&lt;init&gt;(ZipSecureFile.java:122)
+	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipFile(ZipHelper.java:205)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:140)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:277)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.createWorkbook(XSSFWorkbookFactory.java:124)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:327)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:295)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:276)
+	at util.ExcelReader.getdata(ExcelReader.java:36)
+	at com.stepdef.PractiseStepPage.select_testdata_from_excel(PractiseStepPage.java:41)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

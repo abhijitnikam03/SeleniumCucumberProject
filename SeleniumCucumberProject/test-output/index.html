@@ -5,9 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -21,9 +20,9 @@
      -->
   </head>
 
-  <body>    <div class="top-banner-root">
+  <body>
+    <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
@@ -50,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\eclipse-workspace\SeleniumCucumberProject\testng.xml</span>
+                    <span>C:\Users\abhij\git\repository\SeleniumCucumberProject\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -129,22 +128,79 @@
                   <a name="runScenario(&quot;Verify practise page componant&quot;, &quot;Optional[Login to practice page]&quot;)">
                   </a> <!-- runScenario("Verify practise page componant", "Optional[Login to practice page]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify practise page componant","Optional[Login to practice page]")</span>
-                  <div class="stack-trace">io.cucumber.testng.UndefinedStepException: The step &quot;Open practise page site&quot; is undefined. You can implement it using the snippet(s) below:
-
-@Given(&quot;Open practise page site&quot;)
-public void open_practise_page_site() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:102)
-	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:117)
+                  <span class="parameters">("Verify practise page componant", "Optional[Login to practice page]")</span>
+                  <div class="stack-trace">java.lang.NoClassDefFoundError: org/apache/commons/io/build/AbstractStreamBuilder
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:859)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:931)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:819)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:795)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:715)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:702)
+	at org.apache.poi.openxml4j.util.ZipSecureFile.&lt;init&gt;(ZipSecureFile.java:122)
+	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipFile(ZipHelper.java:205)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:140)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:277)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.createWorkbook(XSSFWorkbookFactory.java:124)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:327)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:295)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:276)
+	at util.ExcelReader.getdata(ExcelReader.java:36)
+	at com.stepdef.PractiseStepPage.select_testdata_from_excel(PractiseStepPage.java:41)
+	at ✽.Select testdata from excel &quot;Sheet1&quot; 0(file:///C:/Users/abhij/git/repository/SeleniumCucumberProject/src/test/resource/features/practice.feature:8)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.io.build.AbstractStreamBuilder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:859)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:931)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:819)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:795)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:715)
+	at org.apache.commons.compress.archivers.zip.ZipFile.&lt;init&gt;(ZipFile.java:702)
+	at org.apache.poi.openxml4j.util.ZipSecureFile.&lt;init&gt;(ZipSecureFile.java:122)
+	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipFile(ZipHelper.java:205)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:140)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:277)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbookFactory.createWorkbook(XSSFWorkbookFactory.java:124)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:327)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:295)
+	at org.apache.poi.ss.usermodel.WorkbookFactory.create(WorkbookFactory.java:276)
+	at util.ExcelReader.getdata(ExcelReader.java:36)
+	at com.stepdef.PractiseStepPage.select_testdata_from_excel(PractiseStepPage.java:41)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:64)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:104)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:116)
 	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:117)
 	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:113)
 	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -156,12 +212,12 @@ public void open_practise_page_site() {
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\eclipse-workspace\SeleniumCucumberProject\testng.xml</span>
+            <span class="header-content">C:\Users\abhij\git\repository\SeleniumCucumberProject\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
@@ -217,12 +273,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.testrunner.TestRunner')
-data.setCell(0, 3, 376);
+data.setCell(0, 3, 20235);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 376 ms</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -257,16 +313,15 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify practise page componant", "Optional[Login to practice page]")</span>
-                <span class="method-start">411 ms</span>
+                <span class="method-start">825 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">808 ms</span>
+                <span class="method-start">21094 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>
